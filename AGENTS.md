@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- The homepage lives at the index route; navigation to existing organization pages preserves their original absolute URLs because only the homepage is recreated here.
+- Use imported Lovable asset pointers for source-site photographs and uploaded media; the favicon remains a small local PNG for browser compatibility.
+- Keep the homepage visual system in src/styles.css and use the shared Button for actions so presentation stays consistent.
