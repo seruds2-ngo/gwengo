@@ -5,7 +5,7 @@
 - [x] Verify page display, navigation and payment presentation.
 
 # Requested page updates
-- [ ] Reorganize footer address, QR and NITI AAYOG identifier.
-- [ ] Increase section and footer text by 2px and remove hero image overlay.
-- [ ] Move the focus paragraph to About and update the hands photograph.
-- [ ] Verify the updated page on desktop and mobile.
+- [x] Reorganize footer address, QR and NITI AAYOG identifier.
+- [x] Increase section and footer text by 2px and remove hero image overlay.
+- [x] Move the focus paragraph to About and update the hands photograph.
+- [x] Verify the updated page on desktop and mobile.
