@@ -16,7 +16,7 @@ const nav = [
   { label: "Contact us", path: "/contact-us/" },
 ];
 
-function SiteLink({ href, ...props }: ComponentProps<"a">) {
+function SiteLink({ href, ...props }: Pick<ComponentProps<"a">, "href" | "children" | "className" | "aria-label" | "ref">) {
   if (href === "/" || href === `${base}/`) return <Link to="/" {...props} />;
   if (href === `${base}/about-us/`) return <Link to="/about-us" {...props} />;
   if (href === "/#donate") return <Link to="/" hash="donate" {...props} />;
