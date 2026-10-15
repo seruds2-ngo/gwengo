@@ -285,3 +285,25 @@ main .donate-button, main .hero-secondary { font-size: 16px; }
 .footer-qr { width: 220px; max-width: 100%; height: auto; }
 .footer-bottom { flex-wrap: wrap; align-items: start; line-height: 1.8; }
 .footer-registration { display: inline-block; }
+
+.about-page-heading { background: var(--forest); color: var(--on-forest); padding-block: 28px 50px; }
+.page-breadcrumb { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--on-forest-muted); margin-bottom: 32px; }
+.page-breadcrumb a:hover { color: var(--primary); }
+.about-page-heading .section-kicker { color: var(--primary); }
+.about-page-heading h1 { font: 400 58px/1.15 var(--font-display); }
+.about-page-opening { display: grid; grid-template-columns: 1.25fr 1fr; gap: 56px; align-items: start; }
+.about-page-prose { min-width: 0; }
+.about-page-prose p { font-size: 17px; line-height: 1.9; color: var(--muted-foreground); margin-top: 22px; }
+.about-page-opening .about-page-prose p:first-child { margin-top: 0; }
+.about-page-photo { margin: 0; }
+.about-page-photo img { width: 100%; height: auto; border-radius: 5px; display: block; }
+.about-page-prose .section-title { font-size: 38px; max-width: 960px; }
+.about-table-scroll { overflow-x: auto; margin-top: 28px; }
+.about-table { border-collapse: collapse; width: 100%; font-size: 17px; text-align: left; }
+.about-table th { background: var(--forest); color: var(--on-forest); font-weight: 600; }
+.about-table th,.about-table td { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.about-table tbody tr:nth-child(even) { background: var(--warm-surface); }
+.about-table td { color: var(--muted-foreground); }
+.about-staff-title { margin-top: 56px; }
+@media(max-width: 950px) { .about-page-opening { grid-template-columns: 1fr; gap: 30px; } .about-page-photo { max-width: 640px; } }
+@media(max-width: 640px) { .about-page-heading h1 { font-size: 44px; } .about-page-prose .section-title { font-size: 31px; } .about-table th,.about-table td { padding: 13px 12px; } .about-table { font-size: 15px; min-width: 460px; } }
