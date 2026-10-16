@@ -13,3 +13,7 @@
 # About Us page
 - [ ] Recreate the original About Us content with the homepage design.
 - [ ] Link the main menu to the local About Us page and verify navigation.
+
+# Elders page
+- [ ] Recreate original Elders content with the homepage design.
+- [ ] Link the main menu to the local Elders page and verify both pages.
