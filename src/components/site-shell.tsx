@@ -19,11 +19,12 @@ const nav = [
 function SiteLink({ href, ...props }: Pick<ComponentProps<"a">, "href" | "children" | "className" | "aria-label" | "ref">) {
   if (href === "/" || href === `${base}/`) return <Link to="/" {...props} />;
   if (href === `${base}/about-us/`) return <Link to="/about-us" {...props} />;
+  if (href === `${base}/elders/`) return <Link to="/elders" {...props} />;
   if (href === "/#donate") return <Link to="/" hash="donate" {...props} />;
   return <a href={href} {...props} />;
 }
 
-export function SiteHeader({ activePage }: { activePage: "Home" | "About Us" }) {
+export function SiteHeader({ activePage }: { activePage: "Home" | "About Us" | "Elders" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   return <>
       <div className="topbar"><div className="container topbar-inner"><SiteLink href="mailto:mail2gwe@gmail.com"><Mail size={12} /> mail2gwe@gmail.com</SiteLink><div className="topbar-right"><span className="topbar-location">Kurnool, Andhra Pradesh, India</span><span>Empowering lives since 1998</span><SiteLink href={`${base}/about-us/charitable-status/`}><ShieldCheck size={12} /> Registered NGO</SiteLink></div></div></div>

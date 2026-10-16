@@ -305,5 +305,8 @@ main .donate-button, main .hero-secondary { font-size: 16px; }
 .about-table tbody tr:nth-child(even) { background: var(--warm-surface); }
 .about-table td { color: var(--muted-foreground); }
 .about-staff-title { margin-top: 56px; }
+.elders-needs { padding-left: 22px; margin-top: 24px; color: var(--muted-foreground); font-size: 17px; line-height: 1.9; list-style: disc; }
+.elders-needs li { padding-left: 5px; margin-top: 12px; }
+.elders-needs li::marker { color: var(--primary); }
 @media(max-width: 950px) { .about-page-opening { grid-template-columns: 1fr; gap: 30px; } .about-page-photo { max-width: 640px; } }
 @media(max-width: 640px) { .about-page-heading h1 { font-size: 44px; } .about-page-prose .section-title { font-size: 31px; } .about-table th,.about-table td { padding: 13px 12px; } .about-table { font-size: 15px; min-width: 460px; } }
