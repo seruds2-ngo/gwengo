@@ -169,7 +169,7 @@ h1,h2,h3,p { margin: 0; }
 button,a { -webkit-tap-highlight-color: transparent; }
 a { text-decoration: none; }
 .container { width: min(1240px, calc(100% - 80px)); margin-inline: auto; }
-.topbar { background: var(--forest-deep); color: var(--on-forest-muted); font-size: 11px; }
+.topbar { background: var(--forest-deep); color: var(--on-forest-muted); font-size: 15px; }
 .topbar-inner { height: 35px; display: flex; align-items: center; justify-content: space-between; }
 .topbar a { display: inline-flex; align-items: center; gap: 7px; }
 .topbar-right { display: flex; gap: 24px; align-items: center; }
