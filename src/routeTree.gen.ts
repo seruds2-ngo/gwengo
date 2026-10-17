@@ -14,6 +14,7 @@ import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as ChildrenRouteImport } from './routes/children'
 import { Route as EldersRouteImport } from './routes/elders'
 import { Route as WomenRouteImport } from './routes/women'
+import { Route as AboutUsMissionRouteImport } from './routes/about-us_.mission'
 import { Route as WomenWomenEmpowermentRouteImport } from './routes/women_.women-empowerment'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +42,11 @@ const WomenRoute = WomenRouteImport.update({
   path: '/women',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutUsMissionRoute = AboutUsMissionRouteImport.update({
+  id: '/about-us_/mission',
+  path: '/about-us/mission',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WomenWomenEmpowermentRoute = WomenWomenEmpowermentRouteImport.update({
   id: '/women_/women-empowerment',
   path: '/women/women-empowerment',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/children': typeof ChildrenRoute
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
+  '/about-us/mission': typeof AboutUsMissionRoute
   '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/children': typeof ChildrenRoute
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
+  '/about-us/mission': typeof AboutUsMissionRoute
   '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/children': typeof ChildrenRoute
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
+  '/about-us_/mission': typeof AboutUsMissionRoute
   '/women_/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/children'
     | '/elders'
     | '/women'
+    | '/about-us/mission'
     | '/women/women-empowerment'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/children'
     | '/elders'
     | '/women'
+    | '/about-us/mission'
     | '/women/women-empowerment'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/children'
     | '/elders'
     | '/women'
+    | '/about-us_/mission'
     | '/women_/women-empowerment'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   ChildrenRoute: typeof ChildrenRoute
   EldersRoute: typeof EldersRoute
   WomenRoute: typeof WomenRoute
+  AboutUsMissionRoute: typeof AboutUsMissionRoute
   WomenWomenEmpowermentRoute: typeof WomenWomenEmpowermentRoute
 }
 
@@ -145,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WomenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about-us_/mission': {
+      id: '/about-us_/mission'
+      path: '/about-us/mission'
+      fullPath: '/about-us/mission'
+      preLoaderRoute: typeof AboutUsMissionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/women_/women-empowerment': {
       id: '/women_/women-empowerment'
       path: '/women/women-empowerment'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ChildrenRoute: ChildrenRoute,
   EldersRoute: EldersRoute,
   WomenRoute: WomenRoute,
+  AboutUsMissionRoute: AboutUsMissionRoute,
   WomenWomenEmpowermentRoute: WomenWomenEmpowermentRoute,
 }
 export const routeTree = rootRouteImport

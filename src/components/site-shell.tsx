@@ -19,6 +19,7 @@ const nav = [
 function SiteLink({ href, ...props }: Pick<ComponentProps<"a">, "href" | "children" | "className" | "aria-label" | "ref">) {
   if (href === "/" || href === `${base}/`) return <Link to="/" {...props} />;
   if (href === `${base}/about-us/`) return <Link to="/about-us" {...props} />;
+  if (href === `${base}/about-us/mission/`) return <Link to="/about-us/mission" {...props} />;
   if (href === `${base}/elders/`) return <Link to="/elders" {...props} />;
   if (href === `${base}/children/`) return <Link to="/children" {...props} />;
   if (href === `${base}/women/`) return <Link to="/women" {...props} />;
