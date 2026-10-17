@@ -299,6 +299,7 @@ main .donate-button, main .hero-secondary { font-size: 16px; }
 .about-page-photo { margin: 0; }
 .about-page-photo img { width: 100%; height: auto; border-radius: 5px; display: block; }
 .about-page-prose .section-title { font-size: 38px; max-width: 960px; }
+.about-page-prose .section-title:not(:first-child) { margin-top: 34px; }
 .about-table-scroll { overflow-x: auto; margin-top: 28px; }
 .about-table { border-collapse: collapse; width: 100%; font-size: 17px; text-align: left; }
 .about-table th { background: var(--forest); color: var(--on-forest); font-weight: 600; }
