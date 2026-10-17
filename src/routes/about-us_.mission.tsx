@@ -34,7 +34,7 @@ function Mission() {
             <h2 className="section-title">What we do :</h2>
             <p>We do service to the community. We are reaching out to the marginalized in many ways. We work for the elevation of under privileged women, children and other vulnerable sections using holistic approach that addresses educational, environmental and economic welfare of the women, children and other vulnerable sections. We aim to facilitate the self-sufficiency of women, children and other vulnerable sections.</p>
             <h2 className="section-title">Best practices :</h2>
-            <ul>
+            <ul className="elders-needs">
               <li>Gross root level planning need assessment through the stake holders</li>
               <li>Community participation involvement of beneficiaries in the implementation process</li>
               <li>Promotion of volunteers for implementation of the programs</li>
