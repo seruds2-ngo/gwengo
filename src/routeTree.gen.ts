@@ -11,7 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutUsRouteImport } from './routes/about-us'
+import { Route as ChildrenRouteImport } from './routes/children'
 import { Route as EldersRouteImport } from './routes/elders'
+import { Route as WomenRouteImport } from './routes/women'
+import { Route as WomenWomenEmpowermentRouteImport } from './routes/women_.women-empowerment'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,40 +26,86 @@ const AboutUsRoute = AboutUsRouteImport.update({
   path: '/about-us',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ChildrenRoute = ChildrenRouteImport.update({
+  id: '/children',
+  path: '/children',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EldersRoute = EldersRouteImport.update({
   id: '/elders',
   path: '/elders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WomenRoute = WomenRouteImport.update({
+  id: '/women',
+  path: '/women',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WomenWomenEmpowermentRoute = WomenWomenEmpowermentRouteImport.update({
+  id: '/women_/women-empowerment',
+  path: '/women/women-empowerment',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/children': typeof ChildrenRoute
   '/elders': typeof EldersRoute
+  '/women': typeof WomenRoute
+  '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/children': typeof ChildrenRoute
   '/elders': typeof EldersRoute
+  '/women': typeof WomenRoute
+  '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about-us': typeof AboutUsRoute
+  '/children': typeof ChildrenRoute
   '/elders': typeof EldersRoute
+  '/women': typeof WomenRoute
+  '/women_/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about-us' | '/elders'
+  fullPaths:
+    | '/'
+    | '/about-us'
+    | '/children'
+    | '/elders'
+    | '/women'
+    | '/women/women-empowerment'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about-us' | '/elders'
-  id: '__root__' | '/' | '/about-us' | '/elders'
+  to:
+    | '/'
+    | '/about-us'
+    | '/children'
+    | '/elders'
+    | '/women'
+    | '/women/women-empowerment'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-us'
+    | '/children'
+    | '/elders'
+    | '/women'
+    | '/women_/women-empowerment'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutUsRoute: typeof AboutUsRoute
+  ChildrenRoute: typeof ChildrenRoute
   EldersRoute: typeof EldersRoute
+  WomenRoute: typeof WomenRoute
+  WomenWomenEmpowermentRoute: typeof WomenWomenEmpowermentRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,11 +124,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutUsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/children': {
+      id: '/children'
+      path: '/children'
+      fullPath: '/children'
+      preLoaderRoute: typeof ChildrenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/elders': {
       id: '/elders'
       path: '/elders'
       fullPath: '/elders'
       preLoaderRoute: typeof EldersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/women': {
+      id: '/women'
+      path: '/women'
+      fullPath: '/women'
+      preLoaderRoute: typeof WomenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/women_/women-empowerment': {
+      id: '/women_/women-empowerment'
+      path: '/women/women-empowerment'
+      fullPath: '/women/women-empowerment'
+      preLoaderRoute: typeof WomenWomenEmpowermentRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -88,7 +158,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutUsRoute: AboutUsRoute,
+  ChildrenRoute: ChildrenRoute,
   EldersRoute: EldersRoute,
+  WomenRoute: WomenRoute,
+  WomenWomenEmpowermentRoute: WomenWomenEmpowermentRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

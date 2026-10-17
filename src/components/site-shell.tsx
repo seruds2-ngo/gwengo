@@ -20,11 +20,14 @@ function SiteLink({ href, ...props }: Pick<ComponentProps<"a">, "href" | "childr
   if (href === "/" || href === `${base}/`) return <Link to="/" {...props} />;
   if (href === `${base}/about-us/`) return <Link to="/about-us" {...props} />;
   if (href === `${base}/elders/`) return <Link to="/elders" {...props} />;
+  if (href === `${base}/children/`) return <Link to="/children" {...props} />;
+  if (href === `${base}/women/`) return <Link to="/women" {...props} />;
+  if (href === `${base}/women/women-empowerment/`) return <Link to="/women/women-empowerment" {...props} />;
   if (href === "/#donate") return <Link to="/" hash="donate" {...props} />;
   return <a href={href} {...props} />;
 }
 
-export function SiteHeader({ activePage }: { activePage: "Home" | "About Us" | "Elders" }) {
+export function SiteHeader({ activePage }: { activePage: "Home" | "About Us" | "Elders" | "Children" | "Women" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   return <>
       <div className="topbar"><div className="container topbar-inner"><SiteLink href="mailto:mail2gwe@gmail.com"><Mail size={12} /> mail2gwe@gmail.com</SiteLink><div className="topbar-right"><span className="topbar-location">Kurnool, Andhra Pradesh, India</span><span>Empowering lives since 1998</span><SiteLink href={`${base}/about-us/charitable-status/`}><ShieldCheck size={12} /> Registered NGO</SiteLink></div></div></div>

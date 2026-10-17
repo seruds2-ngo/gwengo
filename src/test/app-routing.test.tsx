@@ -17,6 +17,21 @@ describe("App routing", () => {
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/about-us");
   });
 
+  it.each(["/children", "/children/"])("matches the recreated Children page at %s", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/children");
+  });
+
+  it.each(["/women", "/women/"])("matches the recreated Women page at %s", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/women");
+  });
+
+  it.each(["/women/women-empowerment", "/women/women-empowerment/"])("matches the recreated Women Empowerment page at %s", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/women_/women-empowerment");
+  });
+
   it("matches a page for / instead of falling back to not found", () => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
 
