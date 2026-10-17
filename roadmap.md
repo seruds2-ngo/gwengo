@@ -19,6 +19,6 @@
 - [x] Link the main menu to the local Elders page and verify both pages.
 
 # Children, Women, Women Empowerment pages
-- [ ] Scrape original content and images for the three pages.
-- [ ] Build Children, Women and Women Empowerment pages with the homepage design.
-- [ ] Link them from the main menu, add routing tests, and verify navigation.
+- [x] Scrape original content and images for the three pages.
+- [x] Build Children, Women and Women Empowerment pages with the homepage design.
+- [x] Link them from the main menu, add routing tests, and verify navigation.
