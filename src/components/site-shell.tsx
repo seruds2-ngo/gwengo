@@ -21,6 +21,7 @@ function SiteLink({ href, ...props }: Pick<ComponentProps<"a">, "href" | "childr
   if (href === `${base}/about-us/`) return <Link to="/about-us" {...props} />;
   if (href === `${base}/about-us/mission/`) return <Link to="/about-us/mission" {...props} />;
   if (href === `${base}/elders/`) return <Link to="/elders" {...props} />;
+  if (href === `${base}/elders/nutritious-meal/`) return <Link to="/elders/nutritious-meal" {...props} />;
   if (href === `${base}/children/`) return <Link to="/children" {...props} />;
   if (href === `${base}/women/`) return <Link to="/women" {...props} />;
   if (href === `${base}/women/women-empowerment/`) return <Link to="/women/women-empowerment" {...props} />;
