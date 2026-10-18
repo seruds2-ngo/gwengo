@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { SiteHeader, SiteFooter } from "@/components/site-shell";
 import mealPhoto from "@/assets/gwe-nutritious-meal.webp.asset.json";
 
-export const Route = createFileRoute("/elders/nutritious-meal")({
+export const Route = createFileRoute("/elders_/nutritious-meal")({
   component: NutritiousMeal,
   head: () => ({ meta: [
     { title: "Nutritious Meal for Elders | GWE NGO India" },

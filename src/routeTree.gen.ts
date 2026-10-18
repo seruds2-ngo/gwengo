@@ -15,6 +15,7 @@ import { Route as ChildrenRouteImport } from './routes/children'
 import { Route as EldersRouteImport } from './routes/elders'
 import { Route as WomenRouteImport } from './routes/women'
 import { Route as AboutUsMissionRouteImport } from './routes/about-us_.mission'
+import { Route as EldersNutritiousMealRouteImport } from './routes/elders_.nutritious-meal'
 import { Route as WomenWomenEmpowermentRouteImport } from './routes/women_.women-empowerment'
 
 const IndexRoute = IndexRouteImport.update({
@@ -47,6 +48,11 @@ const AboutUsMissionRoute = AboutUsMissionRouteImport.update({
   path: '/about-us/mission',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EldersNutritiousMealRoute = EldersNutritiousMealRouteImport.update({
+  id: '/elders_/nutritious-meal',
+  path: '/elders/nutritious-meal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WomenWomenEmpowermentRoute = WomenWomenEmpowermentRouteImport.update({
   id: '/women_/women-empowerment',
   path: '/women/women-empowerment',
@@ -60,6 +66,7 @@ export interface FileRoutesByFullPath {
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
   '/about-us/mission': typeof AboutUsMissionRoute
+  '/elders/nutritious-meal': typeof EldersNutritiousMealRoute
   '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesByTo {
@@ -69,6 +76,7 @@ export interface FileRoutesByTo {
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
   '/about-us/mission': typeof AboutUsMissionRoute
+  '/elders/nutritious-meal': typeof EldersNutritiousMealRoute
   '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesById {
@@ -79,6 +87,7 @@ export interface FileRoutesById {
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
   '/about-us_/mission': typeof AboutUsMissionRoute
+  '/elders_/nutritious-meal': typeof EldersNutritiousMealRoute
   '/women_/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRouteTypes {
@@ -90,6 +99,7 @@ export interface FileRouteTypes {
     | '/elders'
     | '/women'
     | '/about-us/mission'
+    | '/elders/nutritious-meal'
     | '/women/women-empowerment'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -99,6 +109,7 @@ export interface FileRouteTypes {
     | '/elders'
     | '/women'
     | '/about-us/mission'
+    | '/elders/nutritious-meal'
     | '/women/women-empowerment'
   id:
     | '__root__'
@@ -108,6 +119,7 @@ export interface FileRouteTypes {
     | '/elders'
     | '/women'
     | '/about-us_/mission'
+    | '/elders_/nutritious-meal'
     | '/women_/women-empowerment'
   fileRoutesById: FileRoutesById
 }
@@ -118,6 +130,7 @@ export interface RootRouteChildren {
   EldersRoute: typeof EldersRoute
   WomenRoute: typeof WomenRoute
   AboutUsMissionRoute: typeof AboutUsMissionRoute
+  EldersNutritiousMealRoute: typeof EldersNutritiousMealRoute
   WomenWomenEmpowermentRoute: typeof WomenWomenEmpowermentRoute
 }
 
@@ -165,6 +178,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutUsMissionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/elders_/nutritious-meal': {
+      id: '/elders_/nutritious-meal'
+      path: '/elders/nutritious-meal'
+      fullPath: '/elders/nutritious-meal'
+      preLoaderRoute: typeof EldersNutritiousMealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/women_/women-empowerment': {
       id: '/women_/women-empowerment'
       path: '/women/women-empowerment'
@@ -182,6 +202,7 @@ const rootRouteChildren: RootRouteChildren = {
   EldersRoute: EldersRoute,
   WomenRoute: WomenRoute,
   AboutUsMissionRoute: AboutUsMissionRoute,
+  EldersNutritiousMealRoute: EldersNutritiousMealRoute,
   WomenWomenEmpowermentRoute: WomenWomenEmpowermentRoute,
 }
 export const routeTree = rootRouteImport
