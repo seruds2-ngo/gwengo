@@ -17,6 +17,11 @@ describe("App routing", () => {
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/about-us");
   });
 
+  it.each(["/elders/nutritious-meal", "/elders/nutritious-meal/"])("matches the recreated Nutritious Meal page at %s", (path) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/elders_/nutritious-meal");
+  });
+
   it.each(["/about-us/mission", "/about-us/mission/"])("matches the recreated Mission page at %s", (path) => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/about-us_/mission");
