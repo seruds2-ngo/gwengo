@@ -18,6 +18,10 @@
 - [x] Recreate the original Mission content with the homepage design.
 - [x] Link the About Us menu to the local Mission page and verify navigation.
 
+# Nutritious Meal page
+- [x] Recreate the original Nutritious Meal content with the homepage design.
+- [x] Link the Elders menu to the local Nutritious Meal page and verify navigation.
+
 # Elders page
 - [x] Recreate original Elders content with the homepage design.
 - [x] Link the main menu to the local Elders page and verify both pages.
