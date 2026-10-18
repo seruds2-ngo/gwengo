@@ -15,7 +15,11 @@ import { Route as ChildrenRouteImport } from './routes/children'
 import { Route as EldersRouteImport } from './routes/elders'
 import { Route as WomenRouteImport } from './routes/women'
 import { Route as AboutUsMissionRouteImport } from './routes/about-us_.mission'
+import { Route as ChildrenEducationMaterialRouteImport } from './routes/children_.education-material'
+import { Route as ChildrenSchoolUniformsRouteImport } from './routes/children_.school-uniforms'
+import { Route as ChildrenSponsorshipRouteImport } from './routes/children_.sponsorship'
 import { Route as EldersNutritiousMealRouteImport } from './routes/elders_.nutritious-meal'
+import { Route as WomenHealthEducationRouteImport } from './routes/women_.health-education'
 import { Route as WomenWomenEmpowermentRouteImport } from './routes/women_.women-empowerment'
 
 const IndexRoute = IndexRouteImport.update({
@@ -48,9 +52,30 @@ const AboutUsMissionRoute = AboutUsMissionRouteImport.update({
   path: '/about-us/mission',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ChildrenEducationMaterialRoute =
+  ChildrenEducationMaterialRouteImport.update({
+    id: '/children_/education-material',
+    path: '/children/education-material',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ChildrenSchoolUniformsRoute = ChildrenSchoolUniformsRouteImport.update({
+  id: '/children_/school-uniforms',
+  path: '/children/school-uniforms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChildrenSponsorshipRoute = ChildrenSponsorshipRouteImport.update({
+  id: '/children_/sponsorship',
+  path: '/children/sponsorship',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EldersNutritiousMealRoute = EldersNutritiousMealRouteImport.update({
   id: '/elders_/nutritious-meal',
   path: '/elders/nutritious-meal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WomenHealthEducationRoute = WomenHealthEducationRouteImport.update({
+  id: '/women_/health-education',
+  path: '/women/health-education',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WomenWomenEmpowermentRoute = WomenWomenEmpowermentRouteImport.update({
@@ -66,7 +91,11 @@ export interface FileRoutesByFullPath {
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
   '/about-us/mission': typeof AboutUsMissionRoute
+  '/children/education-material': typeof ChildrenEducationMaterialRoute
+  '/children/school-uniforms': typeof ChildrenSchoolUniformsRoute
+  '/children/sponsorship': typeof ChildrenSponsorshipRoute
   '/elders/nutritious-meal': typeof EldersNutritiousMealRoute
+  '/women/health-education': typeof WomenHealthEducationRoute
   '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesByTo {
@@ -76,7 +105,11 @@ export interface FileRoutesByTo {
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
   '/about-us/mission': typeof AboutUsMissionRoute
+  '/children/education-material': typeof ChildrenEducationMaterialRoute
+  '/children/school-uniforms': typeof ChildrenSchoolUniformsRoute
+  '/children/sponsorship': typeof ChildrenSponsorshipRoute
   '/elders/nutritious-meal': typeof EldersNutritiousMealRoute
+  '/women/health-education': typeof WomenHealthEducationRoute
   '/women/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRoutesById {
@@ -87,7 +120,11 @@ export interface FileRoutesById {
   '/elders': typeof EldersRoute
   '/women': typeof WomenRoute
   '/about-us_/mission': typeof AboutUsMissionRoute
+  '/children_/education-material': typeof ChildrenEducationMaterialRoute
+  '/children_/school-uniforms': typeof ChildrenSchoolUniformsRoute
+  '/children_/sponsorship': typeof ChildrenSponsorshipRoute
   '/elders_/nutritious-meal': typeof EldersNutritiousMealRoute
+  '/women_/health-education': typeof WomenHealthEducationRoute
   '/women_/women-empowerment': typeof WomenWomenEmpowermentRoute
 }
 export interface FileRouteTypes {
@@ -99,7 +136,11 @@ export interface FileRouteTypes {
     | '/elders'
     | '/women'
     | '/about-us/mission'
+    | '/children/education-material'
+    | '/children/school-uniforms'
+    | '/children/sponsorship'
     | '/elders/nutritious-meal'
+    | '/women/health-education'
     | '/women/women-empowerment'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -109,7 +150,11 @@ export interface FileRouteTypes {
     | '/elders'
     | '/women'
     | '/about-us/mission'
+    | '/children/education-material'
+    | '/children/school-uniforms'
+    | '/children/sponsorship'
     | '/elders/nutritious-meal'
+    | '/women/health-education'
     | '/women/women-empowerment'
   id:
     | '__root__'
@@ -119,7 +164,11 @@ export interface FileRouteTypes {
     | '/elders'
     | '/women'
     | '/about-us_/mission'
+    | '/children_/education-material'
+    | '/children_/school-uniforms'
+    | '/children_/sponsorship'
     | '/elders_/nutritious-meal'
+    | '/women_/health-education'
     | '/women_/women-empowerment'
   fileRoutesById: FileRoutesById
 }
@@ -130,7 +179,11 @@ export interface RootRouteChildren {
   EldersRoute: typeof EldersRoute
   WomenRoute: typeof WomenRoute
   AboutUsMissionRoute: typeof AboutUsMissionRoute
+  ChildrenEducationMaterialRoute: typeof ChildrenEducationMaterialRoute
+  ChildrenSchoolUniformsRoute: typeof ChildrenSchoolUniformsRoute
+  ChildrenSponsorshipRoute: typeof ChildrenSponsorshipRoute
   EldersNutritiousMealRoute: typeof EldersNutritiousMealRoute
+  WomenHealthEducationRoute: typeof WomenHealthEducationRoute
   WomenWomenEmpowermentRoute: typeof WomenWomenEmpowermentRoute
 }
 
@@ -178,11 +231,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutUsMissionRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/children_/education-material': {
+      id: '/children_/education-material'
+      path: '/children/education-material'
+      fullPath: '/children/education-material'
+      preLoaderRoute: typeof ChildrenEducationMaterialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/children_/school-uniforms': {
+      id: '/children_/school-uniforms'
+      path: '/children/school-uniforms'
+      fullPath: '/children/school-uniforms'
+      preLoaderRoute: typeof ChildrenSchoolUniformsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/children_/sponsorship': {
+      id: '/children_/sponsorship'
+      path: '/children/sponsorship'
+      fullPath: '/children/sponsorship'
+      preLoaderRoute: typeof ChildrenSponsorshipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/elders_/nutritious-meal': {
       id: '/elders_/nutritious-meal'
       path: '/elders/nutritious-meal'
       fullPath: '/elders/nutritious-meal'
       preLoaderRoute: typeof EldersNutritiousMealRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/women_/health-education': {
+      id: '/women_/health-education'
+      path: '/women/health-education'
+      fullPath: '/women/health-education'
+      preLoaderRoute: typeof WomenHealthEducationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/women_/women-empowerment': {
@@ -202,7 +283,11 @@ const rootRouteChildren: RootRouteChildren = {
   EldersRoute: EldersRoute,
   WomenRoute: WomenRoute,
   AboutUsMissionRoute: AboutUsMissionRoute,
+  ChildrenEducationMaterialRoute: ChildrenEducationMaterialRoute,
+  ChildrenSchoolUniformsRoute: ChildrenSchoolUniformsRoute,
+  ChildrenSponsorshipRoute: ChildrenSponsorshipRoute,
   EldersNutritiousMealRoute: EldersNutritiousMealRoute,
+  WomenHealthEducationRoute: WomenHealthEducationRoute,
   WomenWomenEmpowermentRoute: WomenWomenEmpowermentRoute,
 }
 export const routeTree = rootRouteImport

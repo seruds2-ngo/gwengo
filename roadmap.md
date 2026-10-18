@@ -32,6 +32,6 @@
 - [x] Link them from the main menu, add routing tests, and verify navigation.
 
 # Health Education and Children program pages
-- [ ] Collect original content and images for Health Education, Education Material, Sponsorship and School Uniforms.
-- [ ] Recreate all four pages with the shared homepage design and local menu links.
+- [x] Collect original content and images for Health Education, Education Material, Sponsorship and School Uniforms.
+- [x] Recreate all four pages with the shared homepage design and local menu links.
 - [ ] Verify navigation, photographs and desktop/mobile display.

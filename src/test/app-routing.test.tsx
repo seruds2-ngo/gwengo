@@ -42,6 +42,20 @@ describe("App routing", () => {
     expect(router.matchRoutes(path).at(-1)?.routeId).toBe("/women_/women-empowerment");
   });
 
+  it.each([
+    ["/women/health-education", "/women_/health-education"],
+    ["/women/health-education/", "/women_/health-education"],
+    ["/children/education-material", "/children_/education-material"],
+    ["/children/education-material/", "/children_/education-material"],
+    ["/children/sponsorship", "/children_/sponsorship"],
+    ["/children/sponsorship/", "/children_/sponsorship"],
+    ["/children/school-uniforms", "/children_/school-uniforms"],
+    ["/children/school-uniforms/", "/children_/school-uniforms"],
+  ])("matches the recreated program page at %s", (path, routeId) => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    expect(router.matchRoutes(path).at(-1)?.routeId).toBe(routeId);
+  });
+
   it("matches a page for / instead of falling back to not found", () => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
 
