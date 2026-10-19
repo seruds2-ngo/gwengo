@@ -38,5 +38,4 @@
 
 # Vercel image hosting
 - [x] Forward Lovable image paths to the existing published asset host on Vercel.
-- [ ] Verify image availability and run the hosting regression tests.
 - [x] Verify image availability and run the hosting regression tests.
