@@ -12,4 +12,5 @@
 - Recreated pages use local TanStack routes (Home, About Us, Mission, Elders, Nutritious Meal, Children, Education Material, Sponsorship, School Uniforms, Women, Women Empowerment, Health Education); all other organization links preserve their original absolute URLs until those pages are recreated so existing destinations remain available.
 - Share the site header, navigation and footer between content pages in a site-shell module to keep presentation and local navigation consistent.
 - Use imported Lovable asset pointers for source-site photographs and uploaded media; the favicon remains a small local PNG for browser compatibility.
+- Keep Vercel's asset-path rewrite pointing to the published Lovable asset host so imported media pointers also resolve outside Lovable; that published host must remain available.
 - Keep the homepage visual system in src/styles.css and use the shared Button for actions so presentation stays consistent.
