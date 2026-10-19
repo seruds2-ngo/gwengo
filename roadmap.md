@@ -35,3 +35,7 @@
 - [x] Collect original content and images for Health Education, Education Material, Sponsorship and School Uniforms.
 - [x] Recreate all four pages with the shared homepage design and local menu links.
 - [x] Verify navigation, photographs and desktop/mobile display.
+
+# Vercel image hosting
+- [x] Forward Lovable image paths to the existing published asset host on Vercel.
+- [x] Verify image availability and run the hosting regression tests.
